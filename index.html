@@ -1,0 +1,828 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HepaSolution — Permanent Natural Treatment for Hepatitis & Fatty Liver</title>
+  <style>
+    :root {
+      --green: #0b8f6b;
+      --dark: #063e32;
+      --muted: #666;
+      --bg: #fdfdfd;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--dark); line-height: 1.5; font-size: 16px; }
+    img { max-width: 100%; display: block; border-radius: 8px; }
+    .container { width: 100%; max-width: 1100px; margin: auto; padding: 1rem; }
+    header { text-align: center; padding: 1rem 0; }
+    header h1 { font-size: 1.6rem; font-weight: 800; }
+    header p { font-size: 0.9rem; color: var(--muted); }
+    /* HERO */
+    .hero { text-align: center; padding: 1.5rem 1rem; }
+    .hero h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: .5rem; }
+    .hero p { color: var(--muted); margin-bottom: 1rem; }
+    .hero img { margin: 1rem auto; max-width: 260px; }
+    .btn { display: inline-block; background: var(--green); color: #fff; padding: .9rem 1.2rem; border-radius: 8px; font-weight: 700; text-decoration: none; }
+    .section { padding: 2rem 1rem; }
+    .section h3 { font-size: 1.2rem; margin-bottom: .6rem; text-align: center; }
+    .section p { margin-bottom: 1rem; }
+    ul { padding-left: 1rem; margin-bottom: 1rem; }
+    ul li { margin-bottom: .4rem; }
+    /* BEFORE AFTER */
+    .before-after { display: grid; gap: 1rem; margin-top: 1rem; }
+    @media(min-width:768px){
+      .before-after { grid-template-columns: 1fr 1fr; }
+    }
+    /* PRICING */
+    .plans { display: grid; gap: 1rem; margin-top: 1rem; }
+    .plan { background: #fff; padding: 1rem; border: 2px solid #eee; border-radius: 10px; text-align: center; }
+    .plan.recommended { border-color: var(--green); }
+    .plan h4 { margin-bottom: .5rem; }
+    .plan .price { font-size: 1.3rem; font-weight: 800; margin-bottom: .5rem; }
+    /* CTA STICKY FOOTER */
+    .sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; background: var(--green); color: #fff; text-align: center; padding: .9rem; font-weight: 700; z-index: 100; }
+    .sticky-cta button { background: #fff; color: var(--green); font-weight: 700; padding: .6rem 1rem; border: none; border-radius: 6px; margin-left: .6rem; }
+    /* WHATSAPP FAB */
+    .whatsapp-fab { position: fixed; right: 1rem; bottom: 4.5rem; background: #25D366; color: #fff; border-radius: 50%; padding: .9rem 1rem; font-weight: 700; text-decoration: none; }
+    .order-form {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+  display: grid;
+  gap: 1rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+.order-form label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #063e32;
+  display: grid;
+  gap: .3rem;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+  width: 100%;
+  padding: .8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.order-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+.site-header {
+  text-align: center;
+  padding: 1rem;
+}
+.site-header h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0;
+}
+.site-header .tagline {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(180deg, #f8fffb 0%, #ffffff 100%);
+}
+.hero .audience-pill {
+  display: inline-block;
+  background: #e8f9f2;
+  color: #0b8f6b;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.hero .headline {
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+.hero .headline span {
+  color: #0b8f6b;
+}
+.hero .sub-headline {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+.hero-img {
+  max-width: 260px;
+  margin: 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+.hero-btn {
+  display: inline-block;
+  background: #0b8f6b;
+  color: #fff;
+  padding: 0.9rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.sub-headline {
+  color: #333;
+  font-size: 1rem;
+  margin: 1rem auto 1.2rem;
+  max-width: 600px;
+  text-align: center;
+}
+
+.hero-bullets {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: 1rem auto;
+  max-width: 650px;
+}
+.hero-bullets li {
+  background: #f3fdf8;
+  border-left: 4px solid #0b8f6b;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 0.6rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+.problem {
+  background: #fffef7;
+  border-top: 2px solid #f7d77c;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 700px;
+}
+.problem h3 {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #b45309;
+}
+.problem p {
+  margin-bottom: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+.solution-grid {
+  display: grid;
+  gap: 1rem;
+}
+@media(min-width:768px) {
+  .solution-grid { grid-template-columns: 1fr 1fr; }
+}
+.solution-grid .card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+}
+.solution-grid img {
+  max-width: 200px;
+  margin: 0 auto 1rem;
+}
+
+.credentials .grid-3 {
+  display: grid;
+  gap: 1rem;
+}
+@media(min-width:768px) {
+  .credentials .grid-3 { grid-template-columns: repeat(3, 1fr); }
+}
+.cred-box {
+  background: #f8fdf9;
+  border: 1px solid #e6f5ed;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.features .grid-3 {
+  display: grid;
+  gap: 1rem;
+}
+@media(min-width:768px) {
+  .features .grid-3 { grid-template-columns: repeat(3, 1fr); }
+}
+.feature {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 1rem;
+}
+.feature h4 {
+  margin-bottom: 0.5rem;
+  color: #0b8f6b;
+}
+.social-proof {
+  background: #f9fffb;
+  border-top: 2px solid #dff5eb;
+  padding: 2rem 1rem;
+}
+.testimonials {
+  display: grid;
+  gap: 1rem;
+}
+@media(min-width:768px){
+  .testimonials { grid-template-columns: repeat(3, 1fr); }
+}
+.test-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #0b8f6b;
+  font-size: 0.95rem;
+}
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.stats h4 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #0b8f6b;
+}
+
+.offer .intro {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.offer-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem auto;
+  max-width: 600px;
+}
+.offer-list li {
+  background: #f3fdf8;
+  padding: .6rem .8rem;
+  margin-bottom: .6rem;
+  border-radius: 6px;
+}
+.offer .plans {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+@media(min-width:768px){
+  .offer .plans { grid-template-columns: repeat(3, 1fr); }
+}
+.offer .plan {
+  background: #fff;
+  padding: 1rem;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  text-align: center;
+}
+.offer .plan.recommended {
+  border-color: #0b8f6b;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.offer .price {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: .5rem 0;
+}
+.guarantee {
+  background: #fffef7;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #fce7a2;
+  margin-bottom: 1.5rem;
+}
+.cta-center {
+  text-align: center;
+}
+.big-btn {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+.scarcity {
+  margin-top: .6rem;
+  font-size: .9rem;
+  color: #b91c1c;
+  font-weight: 600;
+}
+.stack-list { list-style: none; padding: 0; margin: 1rem auto; max-width: 600px; }
+.stack-list li { background: #f3fdf8; padding: .6rem .8rem; margin-bottom: .5rem; border-radius: 6px; }
+.highlight { font-size: 1.1rem; font-weight: 700; color: #0b8f6b; margin-top: 1rem; }
+.deal { font-size: 1rem; margin-top: .5rem; }
+
+.price-reveal .plans { display: grid; gap: 1rem; margin-top: 1rem; }
+@media(min-width:768px){ .price-reveal .plans { grid-template-columns: repeat(3,1fr); } }
+
+.scarcity { background: #fff6f6; border: 1px solid #fca5a5; padding: 1rem; border-radius: 8px; text-align: center; }
+.countdown { font-weight: 800; font-size: 1.2rem; margin-top: .5rem; color: #b91c1c; }
+
+.guarantee { background: #f7fff9; border: 1px solid #bbf7d0; padding: 1rem; border-radius: 8px; text-align: center; }
+
+.cta { text-align: center; padding: 2rem 1rem; }
+.cta p { margin: .5rem 0 1rem; }
+.big-btn { padding: 1rem 2rem; font-size: 1.1rem; display: inline-block; }
+
+.warning { background: #fff8f1; border: 1px solid #fed7aa; padding: 1rem; border-radius: 8px; }
+.reminder { background: #f9fffb; border-top: 2px solid #dff5eb; padding: 2rem 1rem; text-align: center; }
+.small-note { font-size: .85rem; color: #555; margin-top: .6rem; }
+.order-form {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.order-form .form-title {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+  color: #0b8f6b;
+  font-weight: 700;
+}
+
+.order-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.order-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: .3rem;
+  color: #333;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+  width: 100%;
+  padding: .75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: .95rem;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.order-form input:focus,
+.order-form select:focus,
+.order-form textarea:focus {
+  border-color: #0b8f6b;
+  box-shadow: 0 0 0 2px rgba(11,143,107,0.15);
+}
+
+.order-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.btn-submit {
+  background: #0b8f6b;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+  background: #07634b;
+}
+
+ </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <h1>HepaSolution</h1>
+        <p class="tagline">#1 Natural Treatment for Hepatitis & Fatty Liver in Nigeria</p>
+      </header>
+      
+      <section class="hero">
+        <!-- CALL OUT TO AUDIENCE -->
+        <p class="audience-pill">Are you or a loved one battling Hepatitis, Fatty Liver or Cirrhosis?</p>
+        
+        <!-- BIG PROMISE HEADLINE -->
+        <h2 class="headline">
+          Discover How Nigerians Are <span>Reversing Hepatitis & Fatty Liver</span> in Just 
+          <span>45 Days</span> — Without Surgery or Costly Drugs!
+        </h2>
+      
+        <!-- BACKUP PROMISE -->
+        <p class="sub-headline">
+          HepaSolution is a natural liver restoration protocol trusted by hundreds across Nigeria.
+          It flushes toxins, repairs damaged liver cells, and restores energy — 
+          <strong>all within 3 months of consistent use.</strong>
+        </p>
+      
+        <img src="img/hepas.png" alt="HepaSolution Bottle" class="hero-img" />
+      
+        <!-- CTA BUTTON -->
+        <a href="#order" class="btn hero-btn">Order HepaSolution Today</a>
+      </section>
+      
+      <p class="sub-headline">
+        Yes, it’s true! HepaSolution is a natural treatment that works by <strong>flushing out toxins, repairing damaged liver cells, and reducing inflammation</strong>. 
+        That means no more painful symptoms, no risky surgery, and no endless trial of drugs that don’t address the real cause. 
+        In simple words: <strong>your liver starts healing naturally within weeks</strong>.
+        </p>
+        <ul class="hero-bullets">
+            <li>😣 Still battling constant fatigue and weakness — even after taking expensive drugs?</li>
+            <li>🤔 Ever wondered why your doctor only tells you to “manage it” instead of fixing the root cause?</li>
+            <li>💊 Tried supplements and remedies that promised miracles… but nothing really worked?</li>
+            <li>💡 What if there’s a 45-day natural protocol that <strong>restores your liver without side effects</strong>?</li>
+            <li>🌟 Imagine waking up with <strong>clear eyes, steady energy, and no liver pain</strong> — in just 3 months.</li>
+            <li>🚀 Hundreds of Nigerians are already using HepaSolution… why not you?</li>
+          </ul>
+          <section class="section problem">
+            <h3>We Understand Your Struggle</h3>
+            <p>
+              If you’re reading this, chances are you or someone you love has been diagnosed with <strong>Hepatitis or Fatty Liver</strong>. 
+              You know the feeling — the tiredness that won’t go away, the pain in your stomach, the constant fear of what tomorrow might bring. 
+              Maybe you’ve even noticed your eyes turning yellow, or your belly swelling more than normal.
+            </p>
+            <p>
+              And when you visit the hospital, you’re told the same thing again and again: <em>“Just manage it. Come back for check-ups.”</em>  
+              Deep down, you’re scared — because you know liver problems don’t fix themselves.
+            </p>
+            <p>
+              You may have tried pills, bitter herbs, strict diets, even injections. But the truth is: <strong>none of them address the real root cause — repairing and restoring your liver cells</strong>.
+            </p>
+            <p>
+              That’s why so many Nigerians are now turning to <strong>HepaSolution</strong> — the first natural protocol designed to <em>reverse liver damage in 45 days</em>.
+            </p>
+          </section>
+          <section class="section solution">
+            <h3>Finally… A Permanent Natural Solution for Hepatitis & Fatty Liver</h3>
+            <p>
+              Unlike drugs that only “manage symptoms” or bitter herbs that give temporary relief, 
+              <strong>HepaSolution targets the root cause of liver disease</strong> — inflammation and damaged liver cells. 
+              Our unique formula <em>detoxifies the liver, repairs damaged cells, restores normal function, and prevents future complications</em>.
+            </p>
+          
+            <div class="solution-grid">
+              <div class="card">
+                <img src="img/hepas.png" alt="HepaSolution bottles" />
+                <h4>HepaSolution Protocol</h4>
+                <p>A 45-day natural protocol combining <strong>HepaSolution Capsules + Free Tea</strong> for maximum liver support.</p>
+              </div>
+              <div class="card">
+                <img src="img/tea.jpg" alt="Liver healing illustration" />
+                <h4>How It Works</h4>
+                <p>
+                  HepaSolution uses <strong>clinically-inspired natural ingredients</strong> to flush toxins, reduce fat in the liver,
+                  and regenerate liver tissue — results you can feel in weeks.
+                </p>
+              </div>
+            </div>
+          </section>
+          <section class="section features">
+            <h3>What Makes HepaSolution Different</h3>
+            <div class="grid-3">
+              <div class="feature">
+                <h4>🌿 Natural Ingredients</h4>
+                <p><strong>Feature:</strong> Contains L-cysteine, Soy Lecithin, Pueraria extract & vitamins.<br>
+                   <strong>Benefit:</strong> Detoxifies the liver, burns liver fat & repairs damaged cells — naturally.</p>
+              </div>
+              <div class="feature">
+                <h4>🔥 Anti-Inflammatory Action</h4>
+                <p><strong>Feature:</strong> Reduces liver inflammation & swelling.<br>
+                   <strong>Benefit:</strong> No more abdominal pain, bloating, or constant discomfort.</p>
+              </div>
+              <div class="feature">
+                <h4>💪 Restores Energy</h4>
+                <p><strong>Feature:</strong> Improves liver function & blood detoxification.<br>
+                   <strong>Benefit:</strong> Wake up feeling fresh, energized, and clear-headed again.</p>
+              </div>
+              <div class="feature">
+                <h4>🛡 Prevents Complications</h4>
+                <p><strong>Feature:</strong> Strengthens liver cells & stops progression of damage.<br>
+                   <strong>Benefit:</strong> Prevents cirrhosis, liver failure & cancer risks.</p>
+              </div>
+              <div class="feature">
+                <h4>🍵 Free Detox Tea</h4>
+                <p><strong>Feature:</strong> Every plan comes with a free liver-cleansing tea.<br>
+                   <strong>Benefit:</strong> Enhances cleansing, supports digestion, and boosts overall recovery.</p>
+              </div>
+              <div class="feature">
+                <h4>📱 Support & Guidance</h4>
+                <p><strong>Feature:</strong> Personalized follow-up and diet plan.<br>
+                   <strong>Benefit:</strong> Stay on track with guidance from natural health experts.</p>
+              </div>
+            </div>
+          </section>
+                    
+          <section class="section credentials">
+            <h3>Why Nigerians Trust HepaSolution</h3>
+            <div class="grid-3">
+              <div class="cred-box">
+                <h4>✅ Proven Results</h4>
+                <p>Over <strong>1,500+ Nigerians</strong> have successfully restored their liver health with HepaSolution.</p>
+              </div>
+              <div class="cred-box">
+                <h4>👨‍⚕️ Recommended</h4>
+                <p>Endorsed by natural health practitioners & supported by hepatology case studies.</p>
+              </div>
+              <div class="cred-box">
+                <h4>🏆 Recognized</h4>
+                <p>Featured in Nigerian health expos and awarded for <strong>Best Liver Health Supplement 2024</strong>.</p>
+              </div>
+            </div>
+          </section>
+          <section class="section social-proof" id="testimonials">
+            <h3>What People Are Saying About HepaSolution</h3>
+            <div class="testimonials">
+              <div class="test-card">
+                <p>“I was diagnosed with Hepatitis B and felt weak all the time. After 6 weeks on HepaSolution, my energy returned and my eyes cleared. My doctor said my liver tests showed massive improvement!”</p>
+                <strong>— Emmanuel, Benin City</strong>
+              </div>
+              <div class="test-card">
+                <p>“I had been battling fatty liver for years. With HepaSolution, the swelling reduced and my digestion improved. I feel like a new person!”</p>
+                <strong>— Prof. Issa, Ilorin</strong>
+              </div>
+              <div class="test-card">
+                <p>“My ALT/AST levels dropped drastically after 3 months on HepaSolution. It’s the only product that gave me real results.”</p>
+                <strong>— May Willimann</strong>
+              </div>
+            </div>
+          
+            <div class="stats">
+              <div>
+                <h4>1,500+</h4>
+                <p>Nigerians restored liver health with HepaSolution</p>
+              </div>
+              <div>
+                <h4>45 Days</h4>
+                <p>Average time to see lasting improvements</p>
+              </div>
+              <div>
+                <h4>95%</h4>
+                <p>Reported reduced symptoms within 4 weeks</p>
+              </div>
+            </div>
+          </section>
+          <section class="section stack-value">
+            <h3>Here’s Everything You Get Today</h3>
+            <ul class="stack-list">
+              <li>✅ HepaSolution Bottles (your chosen plan: 1, 2, or 3 bottles)</li>
+              <li>✅ FREE Liver Detox Tea (₦10,000 value)</li>
+              <li>✅ FREE Personalized Diet Plan (₦10,000 value)</li>
+              <li>✅ WhatsApp Health Support (₦10,000 value)</li>
+              <li>✅ Free Nationwide Delivery (₦5,000 value)</li>
+            </ul>
+            <p class="highlight">Total Real Value: <strong>₦115,000+</strong></p>
+            <p class="deal">But you won’t pay anywhere close to that today!</p>
+          </section>
+          <section class="section price-reveal">
+            <h3>Special Launch Price (Nigeria Only)</h3>
+            <div class="plans">
+              <div class="plan">
+                <h4>1 Bottle Plan</h4>
+                <p class="price">₦30,000</p>
+              </div>
+              <div class="plan">
+                <h4>2 Bottle Plan</h4>
+                <p class="price">₦50,000</p>
+              </div>
+              <div class="plan recommended">
+                <h4>3 Bottle Plan (Best Value)</h4>
+                <p class="price">₦65,000</p>
+                <p class="note">45-day full reversal protocol + FREE tea</p>
+              </div>
+            </div>
+          </section>
+          <section class="section scarcity">
+            <h3>⚠ Limited Stock Alert</h3>
+            <p>Due to high demand, we only have <strong>87 bottles left in stock</strong>.  
+            Once they’re gone, this special price will be removed and the next batch will restock in 2 weeks.</p>
+            <div class="countdown">
+              ⏰ Offer Expires In: <span id="countdown">48:00:00</span>
+            </div>
+          </section>
+          <section class="section guarantee">
+            <h3>Our 45-Day Guarantee</h3>
+            <p>If you use HepaSolution consistently for 45 days and don’t experience visible improvements in your liver health, energy, and digestion,  
+            <strong>we will give you full support, replacement, or refund.</strong>  
+            That’s how confident we are in this product.</p>
+          </section>
+          <section class="section cta">
+            <h3>Ready to Restore Your Liver?</h3>
+            <p>Join over 1,500 Nigerians who reversed hepatitis and fatty liver with HepaSolution.</p>
+            <a href="#order" class="btn big-btn">👉 Yes! I Want HepaSolution Now</a>
+          </section>
+          <section class="section warning">
+            <h3>⚠ Important Warning</h3>
+            <p>Please <strong>do not order</strong> if you are not ready to pay on delivery within 48 hours.  
+            This is to avoid wastage and ensure only serious customers place orders.  
+            We respect your time and ask you to respect ours too.</p>
+          </section>
+          <section class="section reminder">
+            <h3>One Last Reminder…</h3>
+            <p>HepaSolution has already helped <strong>thousands of Nigerians</strong> restore their health naturally.  
+            But the choice is yours:  
+            <br><br>
+            ❌ Keep struggling with fatigue, pain, and fear of complications…  
+            ✅ Or take action today and give your liver the healing it deserves.  
+            </p>
+            <div class="cta-center">
+              <a href="#order" class="btn big-btn">Order the 3-Bottle Plan Now</a>
+              <p class="small-note">Remember: 3 bottles = full 45-day reversal protocol + FREE detox tea.</p>
+            </div>
+          </section>
+                                                                      
+         
+
+<section class="section" id="plans">
+  <h3>Choose Your Plan</h3>
+  <div class="plans">
+    <div class="plan">
+      <h4>1 Bottle Plan</h4>
+      <div class="price">₦30,000</div>
+      <p>Starter option for mild cases.</p>
+    </div>
+    <div class="plan">
+      <h4>2 Bottle Plan</h4>
+      <div class="price">₦50,000</div>
+      <p>Better value, with free tea included.</p>
+    </div>
+    <div class="plan recommended">
+      <h4>3 Bottle Plan (Best)</h4>
+      <div class="price">₦65,000</div>
+      <p>Full 45-day reversal protocol. Free tea included.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="order">
+    <form id="orderForm" action="https://formspree.io/f/xvgwznzl" method="POST" class="order-form">
+        <h3 class="form-title">Place Your Order Now</h3>
+      
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" name="name" placeholder="Enter your full name" required />
+        </div>
+      
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="08012345678" required />
+        </div>
+      
+        <div class="form-group">
+          <label>Alternative Phone Number</label>
+          <input type="tel" id="alt-phone" name="alt_phone" placeholder="08098765432" required />
+        </div>
+      
+        <div class="form-group">
+          <label>Number of Bottles</label>
+          <select name="bottles" required>
+            <option value="3">3 Bottles — ₦65,000 (Recommended + Free Tea)</option>
+            <option value="2">2 Bottles — ₦50,000</option>
+            <option value="1">1 Bottle — ₦30,000</option>
+          </select>
+        </div>
+      
+        <div class="form-group">
+          <label>State</label>
+          <select id="state" name="state" required>
+            <option value="">-- Select State --</option>
+          </select>
+        </div>
+      
+        <div class="form-group">
+          <label>Local Government (LGA)</label>
+          <select id="lga" name="lga" required disabled>
+            <option value="">-- Select State First --</option>
+          </select>
+        </div>
+      
+        <div class="form-group">
+          <label>Delivery Address</label>
+          <textarea name="address" placeholder="Street, Area, Landmark" required></textarea>
+        </div>
+      
+        <button type="submit" class="btn-submit">Submit Order — Pay on Delivery</button>
+      </form>
+           </section>
+  
+  
+<!-- Sticky CTA -->
+<div class="sticky-cta" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'});">
+    Click here to order the HepaSolution 
+    <button>Order Now</button>
+  </div>
+  
+<!-- WhatsApp floating button -->
+<a class="whatsapp-fab" href="https://wa.me/2349037925799?text=Hello%20I%20want%20to%20order%20HepaSolution" target="_blank">💬Chat To A Doctor</a>
+<script>
+    const stateToLGA = {
+  "Abia": ["Aba North", "Aba South", "Arochukwu", "Bende", "Ikwuano", "Isiala Ngwa North", "Isiala Ngwa South", "Isuikwuato", "Obi Ngwa", "Ohafia", "Osisioma", "Ugwunagbo", "Ukwa East", "Ukwa West", "Umuahia North", "Umuahia South", "Umu Nneochi"],
+  "Adamawa": ["Demsa", "Fufure", "Ganye", "Gayuk", "Gombi", "Grie", "Hong", "Jada", "Larmurde", "Madagali", "Maiha", "Mayo Belwa", "Michika", "Mubi North", "Mubi South", "Numan", "Shelleng", "Song", "Toungo", "Yola North", "Yola South"],
+  "Akwa Ibom": ["Abak", "Eastern Obolo", "Eket", "Esit Eket", "Essien Udim", "Etim Ekpo", "Etinan", "Ibeno", "Ibesikpo Asutan", "Ibiono-Ibom", "Ika", "Ikono", "Ikot Abasi", "Ikot Ekpene", "Ini", "Itu", "Mbo", "Mkpat-Enin", "Nsit-Atai", "Nsit-Ibom", "Nsit-Ubium", "Obot Akara", "Okobo", "Onna", "Oron", "Oruk Anam", "Udung-Uko", "Ukanafun", "Uruan", "Urue-Offong/Oruko", "Uyo"], 
+  "Anambra": ["Aguata", "Anambra East", "Anambra West", "Anaocha", "Awka North", "Awka South", "Ayamelum", "Dunukofia", "Ekwusigo", "Idemili North", "Idemili South", "Ihiala", "Njikoka", "Nnewi North", "Nnewi South", "Ogbaru", "Onitsha North", "Onitsha South", "Orumba North", "Orumba South", "Oyi"], 
+  "Bauchi": ["Alkaleri", "Bauchi", "Bogoro", "Damban", "Darazo", "Dass", "Gamawa", "Ganjuwa", "Giade", "Itas/Gadau", "Jama'are", "Katagum", "Kirfi", "Misau", "Ningi", "Shira", "Tafawa Balewa", "Toro", "Warji", "Zaki"], 
+  "Bayelsa": ["Brass", "Ekeremor", "Kolokuma/Opokuma", "Nembe", "Ogbia", "Sagbama", "Southern Ijaw", "Yenagoa"],
+  "Benue": ["Ado", "Agatu", "Apa", "Buruku", "Gboko", "Guma", "Gwer East", "Gwer West", "Katsina-Ala", "Konshisha", "Kwande", "Logo", "Makurdi", "Obi", "Ogbadibo", "Ohimini", "Oju", "Okpokwu", "Oturkpo", "Tarka", "Ukum", "Ushongo", "Vandeikya"], "Borno": ["Abadam", "Askira/Uba", "Bama", "Bayo", "Biu", "Chibok", "Damboa", "Dikwa", "Gubio", "Guzamala", "Gwoza", "Hawul", "Jere", "Kaga", "Kala/Balge", "Konduga", "Kukawa", "Kwaya Kusar", "Mafa", "Magumeri", "Maiduguri", "Marte", "Mobbar", "Monguno", "Ngala", "Nganzai", "Shani"], 
+  "Cross River": ["Abi", "Akamkpa", "Akpabuyo", "Bakassi", "Bekwarra", "Biase", "Boki", "Calabar Municipal", "Calabar South", "Etung", "Ikom", "Obanliku", "Obubra", "Obudu", "Odukpani", "Ogoja", "Yakuur", "Yala"], "Delta": ["Aniocha North", "Aniocha South", "Bomadi", "Burutu", "Ethiope East", "Ethiope West", "Ika North East", "Ika South", "Isoko North", "Isoko South", "Ndokwa East", "Ndokwa West", "Okpe", "Oshimili North", "Oshimili South", "Patani", "Sapele", "Udu", "Ughelli North", "Ughelli South", "Ukwuani", "Uvwie", "Warri North", "Warri South", "Warri South West"], 
+  "Ebonyi": ["Abakaliki", "Afikpo North", "Afikpo South", "Ebonyi", "Ezza North", "Ezza South", "Ikwo", "Ishielu", "Ivo", "Izzi", "Ohaozara", "Ohaukwu", "Onicha"], 
+  "Edo": ["Akoko-Edo", "Egor", "Esan Central", "Esan North-East", "Esan South-East", "Esan West", "Etsako Central", "Etsako East", "Etsako West", "Igueben", "Ikpoba Okha", "Orhionmwon", "Oredo", "Ovia North-East", "Ovia South-West", "Owan East", "Owan West", "Uhunmwonde"], "Ekiti": ["Ado Ekiti", "Efon", "Ekiti East", "Ekiti South-West", "Ekiti West", "Emure", "Gbonyin", "Ido Osi", "Ijero", "Ikere", "Ikole", "Ilejemeje", "Irepodun/Ifelodun", "Ise/Orun", "Moba", "Oye"], 
+  "Enugu": ["Aninri", "Awgu", "Enugu East", "Enugu North", "Enugu South", "Ezeagu", "Igbo Etiti", "Igbo Eze North", "Igbo Eze South", "Isi Uzo", "Nkanu East", "Nkanu West", "Nsukka", "Oji River", "Udenu", "Udi", "Uzo-Uwani"], "FCT": ["Abuja", "Bwari", "Gwagwalada", "Kuje", "Kwali"], "Gombe": ["Akko", "Balanga", "Billiri", "Dukku", "Funakaye", "Gombe", "Kaltungo", "Kwami", "Nafada", "Shongom", "Yamaltu/Deba"], 
+  "Imo": ["Aboh Mbaise", "Ahiazu Mbaise", "Ehime Mbano", "Ezinihitte", "Ideato North", "Ideato South", "Ihitte/Uboma", "Ikeduru", "Isiala Mbano", "Isu", "Mbaitoli", "Ngor Okpala", "Njaba", "Nkwerre", "Nwangele", "Obowo", "Oguta", "Ohaji/Egbema", "Okigwe", "Orlu", "Orsu", "Oru East", "Oru West", "Owerri Municipal", "Owerri North", "Owerri West", "Unuimo"], "Jigawa": ["Auyo", "Babura", "Biriniwa", "Birnin Kudu", "Buji", "Dutse", "Gagarawa", "Garki", "Gumel", "Guri", "Gwaram", "Gwiwa", "Hadejia", "Jahun", "Kafin Hausa", "Kazaure", "Kiri Kasama", "Kiyawa", "Kaugama", "Maigatari", "Malam Madori", "Miga", "Ringim", "Roni", "Sule Tankarkar", "Taura", "Yankwashi"], 
+  "Kaduna": ["Birnin Gwari", "Chikun", "Giwa", "Igabi", "Ikara", "Jaba", "Jema'a", "Kachia", "Kaduna North", "Kaduna South", "Kagarko", "Kajuru", "Kaura", "Kauru", "Kubau", "Kudan", "Lere", "Makarfi", "Sabon Gari", "Sanga", "Soba", "Zangon Kataf", "Zaria"],
+  "Kano": ["Ajingi", "Albasu", "Bagwai", "Bebeji", "Bichi", "Bunkure", "Dala", "Dambatta", "Dawakin Kudu", "Dawakin Tofa", "Doguwa", "Fagge", "Gabasawa", "Garko", "Garun Mallam", "Gaya", "Gezawa", "Gwale", "Gwarzo", "Kabo", "Kano Municipal", "Karaye", "Kibiya", "Kiru", "Kumbotso", "Kunchi", "Kura", "Madobi", "Makoda", "Minjibir", "Nasarawa", "Rano", "Rimin Gado", "Rogo", "Shanono", "Sumaila", "Takai", "Tarauni", "Tofa", "Tsanyawa", "Tudun Wada", "Ungogo", "Warawa", "Wudil"],
+  "Katsina": ["Bakori", "Batagarawa", "Batsari", "Baure", "Bindawa", "Charanchi", "Dandume", "Danja", "Dan Musa", "Daura", "Dutsi", "Dutsin Ma", "Faskari", "Funtua", "Ingawa", "Jibia", "Kafur", "Kaita", "Kankara", "Kankia", "Katsina", "Kurfi", "Kusada", "Mai'Adua", "Malumfashi", "Mani", "Mashi", "Matazu", "Musawa", "Rimi", "Sabuwa", "Safana", "Sandamu", "Zango"],
+  "Kebbi": ["Aleiro", "Arewa Dandi", "Argungu", "Augie", "Bagudo", "Birnin Kebbi", "Bunza", "Dandi", "Fakai", "Gwandu", "Jega", "Kalgo", "Koko/Besse", "Maiyama", "Ngaski", "Sakaba", "Shanga", "Suru", "Wasagu/Danko", "Yauri", "Zuru"], 
+  "Kogi": ["Adavi", "Ajaokuta", "Ankpa", "Bassa", "Dekina", "Ibaji", "Idah", "Igalamela Odolu", "Ijumu", "Kabba/Bunu", "Kogi", "Lokoja", "Mopa Muro", "Ofu", "Ogori/Magongo", "Okehi", "Okene", "Olamaboro", "Omala", "Yagba East", "Yagba West"], 
+  "Kwara": ["Asa", "Baruten", "Edu", "Ekiti", "Ifelodun", "Ilorin East", "Ilorin South", "Ilorin West", "Irepodun", "Isin", "Kaiama", "Moro", "Offa", "Oke Ero", "Oyun", "Pategi"], "Lagos": ["Agege", "Ajeromi-Ifelodun", "Alimosho", "Amuwo-Odofin", "Apapa", "Badagry", "Epe", "Eti Osa", "Ibeju-Lekki", "Ifako-Ijaiye", "Ikeja", "Ikorodu", "Kosofe", "Lagos Island", "Lagos Mainland", "Mushin", "Ojo", "Oshodi-Isolo", "Shomolu", "Surulere"], "Nasarawa": ["Akwanga", "Awe", "Doma", "Karu", "Keana", "Keffi", "Kokona", "Lafia", "Nasarawa", "Nasarawa Egon", "Obi", "Toto", "Wamba"],
+  "Niger": ["Agaie", "Agwara", "Bida", "Borgu", "Bosso", "Chanchaga", "Edati", "Gbako", "Gurara", "Katcha", "Kontagora", "Lapai", "Lavun", "Magama", "Mariga", "Mashegu", "Mokwa", "Munya", "Paikoro", "Rafi", "Rijau", "Shiroro", "Suleja", "Tafa", "Wushishi"], 
+  "Ogun": ["Abeokuta North", "Abeokuta South", "Ado-Odo/Ota", "Egbado North", "Egbado South", "Ewekoro", "Ifo", "Ijebu East", "Ijebu North", "Ijebu North East", "Ijebu Ode", "Ikenne", "Imeko Afon", "Ipokia", "Obafemi Owode", "Odeda", "Odogbolu", "Ogun Waterside", "Remo North", "Shagamu"],
+  "Ondo": ["Akoko North-East", "Akoko North-West", "Akoko South-East", "Akoko South-West", "Akure North", "Akure South", "Ese Odo", "Idanre", "Ifedore", "Ilaje", "Ile Oluji/Okeigbo", "Irele", "Odigbo", "Okitipupa", "Ondo East", "Ondo West", "Ose", "Owo"], 
+  "Osun": ["Aiyedade", "Aiyedire", "Atakunmosa East", "Atakunmosa West", "Boluwaduro", "Boripe", "Ede North", "Ede South", "Egbedore", "Ejigbo", "Ife Central", "Ife East", "Ife North", "Ife South", "Ifedayo", "Ifelodun", "Ila", "Ilesa East", "Ilesa West", "Irepodun", "Irewole", "Isokan", "Iwo", "Obokun", "Odo Otin", "Ola Oluwa", "Olorunda", "Oriade", "Orolu", "Osogbo"], "Oyo": ["Afijio", "Akinyele", "Atiba", "Atisbo", "Egbeda", "Ibadan North", "Ibadan North-East", "Ibadan North-West", "Ibadan South-East", "Ibadan South-West", "Ibarapa Central", "Ibarapa East", "Ibarapa North", "Ido", "Irepo", "Iseyin", "Itesiwaju", "Iwajowa", "Kajola", "Lagelu", "Ogbomosho North", "Ogbomosho South", "Ogo Oluwa", "Olorunsogo", "Oluyole", "Ona Ara", "Orelope", "Ori Ire", "Oyo East", "Oyo West", "Saki East", "Saki West", "Surulere"], "Plateau": ["Barkin Ladi", "Bassa", "Bokkos", "Jos East", "Jos North", "Jos South", "Kanam", "Kanke", "Langtang North", "Langtang South", "Mangu", "Mikang", "Pankshin", "Qua'an Pan", "Riyom", "Shendam", "Wase"], "Rivers": ["Abua/Odual", "Ahoada East", "Ahoada West", "Akuku-Toru", "Andoni", "Asari-Toru", "Bonny", "Degema", "Eleme", "Emuoha", "Etche", "Gokana", "Ikwerre", "Khana", "Obio/Akpor", "Ogba/Egbema/Ndoni", "Ogu/Bolo", "Okrika", "Omuma", "Opobo/Nkoro", "Oyigbo", "Port Harcourt", "Tai"], "Sokoto": ["Binji", "Bodinga", "Dange Shuni", "Gada", "Goronyo", "Gudu", "Gwadabawa", "Illela", "Isa", "Kebbe", "Kware", "Rabah", "Sabon Birni", "Shagari", "Silame", "Sokoto North", "Sokoto South", "Tambuwal", "Tangaza", "Tureta", "Wamako", "Wurno", "Yabo"], "Taraba": ["Ardo Kola", "Bali", "Donga", "Gashaka", "Gassol", "Ibi", "Jalingo", "Karim Lamido", "Kurmi", "Lau", "Sardauna", "Takum", "Ussa", "Wukari", "Yorro", "Zing"], "Yobe": ["Bade", "Bursari", "Damaturu", "Fika", "Fune", "Geidam", "Gujba", "Gulani", "Jakusko", "Karasuwa", "Machina", "Nangere", "Nguru", "Potiskum", "Tarmuwa", "Yunusari", "Yusufari"], "Zamfara": ["Anka", "Bakura", "Birnin Magaji/Kiyaw", "Bukkuyum", "Bungudu", "Gummi", "Gusau", "Kaura Namoda", "Maradun", "Maru", "Shinkafi", "Talata Mafara", "Chafe", "Zurmi"] };
+
+  
+    const stateSelect = document.getElementById('state');
+    const lgaSelect = document.getElementById('lga');
+  
+    // Populate states
+    for (let state in stateToLGA) {
+      const option = document.createElement('option');
+      option.value = state;
+      option.textContent = state;
+      stateSelect.appendChild(option);
+    }
+  
+    // Handle state change
+    stateSelect.addEventListener('change', function() {
+      const selectedState = this.value;
+      lgaSelect.innerHTML = '';
+      if (selectedState && stateToLGA[selectedState]) {
+        lgaSelect.disabled = false;
+        const defaultOption = document.createElement('option');
+        defaultOption.value = '';
+        defaultOption.textContent = '-- Select LGA --';
+        lgaSelect.appendChild(defaultOption);
+        stateToLGA[selectedState].forEach(lga => {
+          const option = document.createElement('option');
+          option.value = lga;
+          option.textContent = lga;
+          lgaSelect.appendChild(option);
+        });
+      } else {
+        lgaSelect.disabled = true;
+        const option = document.createElement('option');
+        option.value = '';
+        option.textContent = '-- Select State First --';
+        lgaSelect.appendChild(option);
+      }
+    });
+  
+    // Validation + Formspree submission
+    document.getElementById("orderForm").addEventListener("submit", async function(event) {
+      const phone = document.getElementById("phone").value.trim();
+      const altPhone = document.getElementById("alt-phone").value.trim();
+      const phoneRegex = /^\d{11}$/;
+  
+      if (!phoneRegex.test(phone) || !phoneRegex.test(altPhone)) {
+        alert("Both phone numbers must be exactly 11 digits.");
+        event.preventDefault();
+        return false;
+      }
+  
+      event.preventDefault();
+      let response = await fetch(this.action, {
+        method: this.method,
+        body: new FormData(this),
+        headers: { 'Accept': 'application/json' }
+      });
+  
+      if (response.ok) {
+        window.location.href = "https://fibroidtreatment.xyz/tubal"; // Success redirect
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    });
+  </script>
+  
+</body>
+</html>
